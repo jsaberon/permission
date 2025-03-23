@@ -20,7 +20,7 @@ class Permission extends Model
         return $this->belongsToMany(Role::class);
     }
 
-    protected function branches(): Attribute
+    protected function name(): Attribute
     {
         return Attribute::make(
             get: fn ($value) => strtolower($value),
